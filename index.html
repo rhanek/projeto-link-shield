@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Link Shield — Verificador de Segurança</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family
+;=JetBrains+Mono&display;=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="app-wrapper">
+<header class="hero">
+<div class="logo">■ Link<span>Shield</span></div>
+<p class="tagline">Verifique se um link é seguro antes de clicar</p>
+</header>
+<main class="container">
+<section class="search-box">
+<div class="input-group">
+<input type="url" id="urlInput"
+placeholder="Cole aqui a URL suspeita... ex: https://exemplo.com"
+autocomplete="off" spellcheck="false">
+<button id="checkBtn" class="btn-check">
+<span class="btn-icon">■■</span>
+<span class="btn-text">Verificar</span>
+</button>
+</div>
+<p class="hint">Pressione Enter ou clique em Verificar</p>
+</section>
+<section id="loading" class="loading hidden">
+<div class="spinner"></div>
+<p>Analisando URL...</p>
+</section>
+<section id="result" class="result-card hidden">
+<div class="result-header">
+<span id="resultIcon" class="result-icon"></span>
+<div>
+<h2 id="resultTitle"></h2>
+<p id="resultUrl" class="resul
+</section>
+<section id="result" class="result-card hidden">
+<div class="result-header">
+<span id="resultIcon" class="result-icon"></span>
+<div>
+<h2 id="resultTitle"></h2>
+<p id="resultUrl" class="result-url"></p>
+</div>
+</div>
+<div class="score-bar-wrap">
+<span>Pontuação de Segurança</span>
+<span id="scoreNum" class="score-num"></span>
+</div>
+<div class="score-bar"><div id="scoreBar" class="score-fill"></div></div>
+<ul id="checksList" class="checks-list"></ul>
+<button id="exportBtn" class="btn-export">■ Exportar Relatório</button>
+</section>
+<section id="historySection" class="history hidden">
+<h3>■ Histórico de consultas</h3>
+<ul id="historyList"></ul>
+<button id="clearHistory" class="btn-clear">Limpar histórico</button>
+</section>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+■ Explicação linha por linha — 
